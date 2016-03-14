@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    
+      <meta charset="UTF-8">
+      <title>Common Angular Template</title>
+
+      <meta name="discription" content=""/>
+      <meta http-equiv="X-UA-Compatible-width", content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <link rel="shortcut icon" href="myicon.png"/>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     
+      <!-- 3rd PARTY LIBS -->
+      <script src="lib/angular.min.js"></script>
+      <script src="lib/angular-route.min.js"></script>
+
+      <!-- CONTROLLERS -->
+      <script src="js/app.js"></script>
+      <script src="js/controllers/homeController.js"></script>
+      <script src="js/controllers/aboutController.js"></script>
+      <script src="js/controllers/contactController.js"></script>
+
+      <link rel="stylesheet" href="css/main.css" />
+
+    </head>
+  <body ng-controller="homeController">
+
+      <!-- HEADER AND NAVBAR -->
+      <header>
+        <nav class="navbar navbar-default">
+         <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Angular Routing Example</a>
+          </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+              <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+              <li><a href="#animation"><i class="fa fa-send"></i> Animation</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT AND INJECTED VIEWS -->
+      <div id="main">
+
+         <!--  {{ message }} -->
+
+          <!-- TEST ANGULAR -->
+        <h1>Name</h1>
+        <input type="text" ng-model="name">
+        <br />
+        Name, {{ name }}
+
+        <div ng-view>
+             
+        </div>
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+      </div>
+  </body>
+</html>
